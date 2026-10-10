@@ -193,7 +193,7 @@ def load() -> dict:
                 if "credits" not in u:
                     u["credits"] = 0
                 if "sms_history" not in u:
-                    u["sms_history"] =
+                    u["sms_history"] = []
             for sa in SUPER_ADMINS:
                 if sa not in data["owners"]:
                     data["owners"].append(sa)
