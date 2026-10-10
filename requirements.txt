@@ -1,5 +1,2 @@
-requests
-python-telegram-bot
-beautifulsoup4
-firebase-admin
+aiogram
 aiohttp
