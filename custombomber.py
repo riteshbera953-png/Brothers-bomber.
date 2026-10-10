@@ -52,20 +52,17 @@ log = logging.getLogger("BlastBot")
 BOT_NAME = "BROTHERS BOMBER BOT"
 
 MAIN_OWNER = 5999496406  # Primary Owner / Super Admin
-
-SUPER_ADMINS = [5999496406, 8663496517]  # Hardcoded Super Admins
-
 DEVELOPER_USERNAME = "@Brotherssspannel"
 SUPER_ADMIN_NAME = DEVELOPER_USERNAME
 SUPER_ADMIN_LINK = "https://t.me/Brotherssspannel"
 
 # Force Join defaults (3 channels)
 CHANNEL_LINKS = [
-    "https://t.me/+6gzQXYSTRZtkZWRl",
+    
     "https://t.me/PANELEMPIRE2",
     "https://t.me/jalimjoker420"
 ]
-CHANNEL_IDS = [-1003770463666, -1004309254414, -1003355751157]
+CHANNEL_IDS = [-1004309254414, -1003355751157]
 
 BOT_TOKEN = "8633183012:AAFQK8HKSsW58631imbh07T3y5Mu1k419HQ"
 
@@ -196,8 +193,7 @@ def load() -> dict:
                 if "credits" not in u:
                     u["credits"] = 0
                 if "sms_history" not in u:
-                    u["sms_history"] = []
-            # ensure hardcoded super admins are in owners
+                    u["sms_history"] = [
             for sa in SUPER_ADMINS:
                 if sa not in data["owners"]:
                     data["owners"].append(sa)
